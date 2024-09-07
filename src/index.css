@@ -1,0 +1,427 @@
+/*
+=============== 
+Variables
+===============
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background: #f1f5f8;
+  color: #102a42;
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  margin-bottom: 1.25rem;
+}
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+/* more global css */
+
+.btn {
+  text-transform: uppercase;
+  background: #645cff;
+  color: #fff;
+  padding: 0.375rem 0.75rem;
+  letter-spacing: 0.25rem;
+  display: inline-block;
+  font-weight: 700;
+  transition: all 0.3s linear;
+  font-size: 0.875rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+.btn:hover {
+  color: #645cff;
+  background: #a29dff;
+}
+
+/*
+=============== 
+Navbar
+===============
+*/
+.loading {
+  text-align: center;
+  margin-top: 5rem;
+}
+nav {
+  background: #645cff;
+  padding: 1.25rem 2rem;
+}
+.nav-center {
+  max-width: 50rem;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav h3 {
+  margin-bottom: 0;
+  letter-spacing: 1px;
+  color: #fff;
+}
+.nav-container {
+  display: block;
+  position: relative;
+}
+nav svg {
+  width: 40px;
+  color: #fff;
+}
+.amount-container {
+  position: absolute;
+  top: -0.6rem;
+  right: -0.6rem;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  background: #a29dff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.total-amount {
+  color: #fff;
+  margin-bottom: 0;
+  font-size: 1.25rem;
+}
+/*
+=============== 
+Cart
+===============
+*/
+.cart {
+  min-height: calc(100vh - 120px);
+  width: 90vw;
+  margin: 0 auto;
+  margin-top: 40px;
+  padding: 2.5rem 0;
+  max-width: 50rem;
+}
+.cart h2 {
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.empty-cart {
+  text-transform: lowercase;
+  color: #617d98;
+  margin-top: 1rem;
+  text-align: center;
+}
+.cart footer {
+  margin-top: 4rem;
+  text-align: center;
+}
+.cart-total h4 {
+  text-transform: capitalize;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+.clear-btn,
+.confirm-btn {
+  background: transparent;
+  padding: 0.5rem 1rem;
+  color: hsl(360, 67%, 44%);
+  border: 1px solid hsl(360, 67%, 44%);
+  margin-top: 2.25rem;
+  border-radius: 0.25rem;
+}
+.clear-btn:hover {
+  background: hsl(360, 71%, 66%);
+  color: hsl(360, 67%, 44%);
+  border-color: hsl(360, 71%, 66%);
+}
+.confirm-btn {
+  border-color: #645cff;
+  color: #645cff;
+}
+/*
+=============== 
+Cart Item
+===============
+*/
+.cart-item {
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 1fr auto;
+  grid-column-gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+.cart-item img {
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+}
+.cart-item h4 {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+.item-price {
+  color: #617d98;
+}
+.remove-btn {
+  color: #645cff;
+  letter-spacing: 0.25rem;
+  cursor: pointer;
+  font-size: 0.85rem;
+  background: transparent;
+  border: none;
+  margin-top: 0.375rem;
+  transition: all 0.3s linear;
+}
+.remove-btn:hover {
+  color: #a29dff;
+}
+.amount-btn {
+  width: 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.amount-btn svg {
+  color: #645cff;
+}
+.amount-btn:hover svg {
+  color: #a29dff;
+}
+.amount {
+  text-align: center;
+  margin-bottom: 0;
+  font-size: 1.25rem;
+  line-height: 1;
+}
+hr {
+  background: #617d98;
+  border-color: transparent;
+  border-width: 0.25px;
+}
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  background: #fff;
+  width: 80vw;
+  max-width: 400px;
+  border-radius: 0.25rem;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+.modal h4 {
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+.modal .clear-btn,
+.modal .confirm-btn {
+  margin-top: 1rem;
+}
+.btn-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+/*
+=============== 
+My Custom Css
+===============
+*/
+
+.cart-icon-container {
+  position: relative;
+}
+
+.a-container {
+  color: #fff;
+  background-color: cadetblue;
+  margin: 0;
+  padding: 0;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  position: absolute;
+  top: -1rem;
+  right: -1rem;
+}
+
+.cart-center {
+  max-width: 50rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 5rem 0;
+}
+
+.cart-center > h1,
+.cart-center > p {
+  text-align: center;
+}
+
+.cart-center > p {
+  font-size: 1.8rem;
+  margin-top: 1rem;
+  color: #617d98;
+}
+
+.single-cart-item {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 1.2rem;
+  margin: 3rem 0;
+}
+
+img {
+  height: 5rem;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: start;
+}
+
+.info p,
+.info h4 {
+  margin: 0;
+}
+
+.amount-btns {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  place-items: center;
+}
+
+.amount-btns button {
+  width: 24px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.info button {
+  background-color: transparent;
+  border: none;
+  color: hsl(360, 67%, 44%);
+  font-size: 1rem;
+}
+
+.amount-btns p {
+  margin: 0;
+}
+footer {
+  position: relative;
+}
+footer span {
+  position: absolute;
+  right: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+/*
+=============== 
+MODAL CUSTOM CSS
+===============
+*/
+
+.modal-overlay {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: grid;
+  place-items: center;
+}
+
+.modal-containerr {
+  width: 90vw;
+  max-width: 600px;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.modal-containerr h4 {
+  text-align: center;
+}
+
+.btns-container {
+  display: flex;
+  justify-content: space-between;
+}
